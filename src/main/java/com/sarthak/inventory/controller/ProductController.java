@@ -14,7 +14,7 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Product> getAllProducts(){
         return productService.getAllProducts();
     }
@@ -28,4 +28,5 @@ public class ProductController {
     public void createProduct(@RequestBody Product product) {
         productService.saveProduct(product);
     }
+
 }
